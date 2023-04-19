@@ -79,16 +79,18 @@ public class OAuth2Controller {
     }
 
     @RequestMapping("/revoke_token")
-    public ResponseEntity revokeToken(@RequestParam Map<String, Object> requestParam, HttpSession session) {
+    public ModelAndView revokeToken(@RequestParam Map<String, Object> requestParam, HttpSession session) {
         String accessToken = (String) requestParam.get("access_token");
         String refreshToken = (String) requestParam.get("refresh_token");
-        OAuth2AccessToken oAuth2AccessToken = new DefaultOAuth2AccessToken(accessToken);
-        OAuth2RefreshToken oAuth2RefreshToken = new DefaultOAuth2RefreshToken(refreshToken);
-        tokenStore.removeAccessToken(oAuth2AccessToken);
-        tokenStore.removeRefreshToken(oAuth2RefreshToken);
-        session.removeAttribute("authentication");
-        Map<String, Object> response = new HashMap<>();
-        response.put("message", "success");
-        return ResponseEntity.ok(response);
+        if (accessToken == null || refreshToken == null) {
+            return new ModelAndView("error");
+        } else {
+            OAuth2AccessToken oAuth2AccessToken = new DefaultOAuth2AccessToken(accessToken);
+            OAuth2RefreshToken oAuth2RefreshToken = new DefaultOAuth2RefreshToken(refreshToken);
+            tokenStore.removeAccessToken(oAuth2AccessToken);
+            tokenStore.removeRefreshToken(oAuth2RefreshToken);
+            session.removeAttribute("authentication");
+            return new ModelAndView("account");
+        }
     }
 }

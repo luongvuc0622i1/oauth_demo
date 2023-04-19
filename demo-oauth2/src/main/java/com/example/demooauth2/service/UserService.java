@@ -9,4 +9,8 @@ public interface UserService {
     List<User> findAll();
 
     User findByUsername(String username);
+
+    User save(User user);
+
+    Boolean notExistEmail(String email);
 }

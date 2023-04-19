@@ -23,4 +23,20 @@ public class UserServiceImpl implements UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username).get();
     }
+
+    @Override
+    public User save(User user) {
+        return userRepository.save(user);
+    }
+
+    @Override
+    public Boolean notExistEmail(String email) {
+        List<User> userList = userRepository.findAll();
+        for (User user : userList) {
+            if (user.getEmail().equals(email)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
