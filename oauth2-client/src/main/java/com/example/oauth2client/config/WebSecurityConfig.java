@@ -14,12 +14,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-//                .antMatcher("/**")
+                .antMatcher("/**")
                 .authorizeRequests()
                 .antMatchers("/oauth/callback").permitAll()
-                .antMatchers("/oauth/login").permitAll()
-                .antMatchers("/oauth/info").permitAll()
-                .antMatchers("/oauth/logout").permitAll()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/info").permitAll()
+                .antMatchers("/logout1").permitAll()
                 .anyRequest().authenticated();
     }
 }

@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/oauth")
+//@RequestMapping("/oauth")
 public class OAuth2Controller {
 
     private static final String CLIENT_ID = "mobile";
@@ -26,7 +26,7 @@ public class OAuth2Controller {
     @Autowired
     private OAuth2Service oAuth2Service;
 
-    @GetMapping("/callback")
+    @GetMapping("/oauth/callback")
     public ResponseEntity oauthCallback(@RequestParam Map<String, String> requestParam) {
         if (requestParam == null || requestParam.isEmpty()) {
             Map<String, Object> response = new HashMap<>();
@@ -56,7 +56,7 @@ public class OAuth2Controller {
         return new ModelAndView("redirect:http://localhost:8081/users/profile?access_token="+accessToken);
     }
 
-    @GetMapping("/logout")
+    @GetMapping("/logout1")
     public ModelAndView logout() {
         return new ModelAndView("redirect:http://localhost:8081/oauth/revoke_token?access_token="+accessToken+"&refresh_token="+refreshToken);
     }
