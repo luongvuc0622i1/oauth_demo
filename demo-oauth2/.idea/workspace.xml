@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6e91ca-3e1d-4004-8dee-51bf4c59c3ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/forgot-password.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo-oauth2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-oauth2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/controller/server/oauth2/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/controller/server/oauth2/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/account.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oauth2-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth2-client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oauth2-client/src/main/java/com/example/oauth2client/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth2-client/src/main/java/com/example/oauth2client/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oauth2-client/src/main/java/com/example/oauth2client/controller/OAuth2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth2-client/src/main/java/com/example/oauth2client/controller/OAuth2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oauth2-client/target/classes/com/example/oauth2client/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth2-client/target/classes/com/example/oauth2client/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oauth2-client/target/classes/com/example/oauth2client/controller/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oauth2-client/target/classes/com/example/oauth2client/controller/OAuth2Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +110,7 @@
       <workItem from="1681791186416" duration="190000" />
       <workItem from="1681792036586" duration="100000" />
       <workItem from="1681792346058" duration="18627000" />
-      <workItem from="1681874645217" duration="38301000" />
+      <workItem from="1681874645217" duration="38478000" />
     </task>
     <servers />
   </component>
