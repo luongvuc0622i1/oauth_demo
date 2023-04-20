@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -24,7 +25,7 @@ public class LoginController {
     @Autowired
     private RoleRepository roleRepository;
 
-    @GetMapping("/login")
+    @GetMapping("/account")
     public String login() {
         return "account";
     }
@@ -57,5 +58,10 @@ public class LoginController {
             return "account";
         }
         return "error";
+    }
+
+    @GetMapping("/forgot")
+    public ModelAndView forgot() {
+        return new ModelAndView("forgot-password");
     }
 }

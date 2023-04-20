@@ -50,7 +50,7 @@ public class OAuth2Controller {
             session.setAttribute("redirect_uri", parameters.getOrDefault("redirect_uri", null));
             session.setAttribute("scope", parameters.getOrDefault("scope", null));
             session.setAttribute("state", parameters.getOrDefault("state", null));
-            return new ModelAndView("redirect:/login");
+            return new ModelAndView("redirect:/account");
         }
         return authorizationEndpoint.authorize(model, parameters, sessionStatus, authentication);
     }

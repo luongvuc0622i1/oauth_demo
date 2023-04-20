@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Account</title>
   <!--  Icon social-->
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
   <!--  Icon eye-->
@@ -240,37 +240,12 @@
       height: 40px;
       width: 40px;
     }
-
-    footer {
-      background-color: #222;
-      color: #fff;
-      font-size: 14px;
-      bottom: 0;
-      position: fixed;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 999;
-    }
-
-    footer p {
-      margin: 10px 0;
-    }
-
-    footer i {
-      color: red;
-    }
-
-    footer a {
-      color: #3c97bf;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
 <div class="container" id="container">
   <div class="form-container sign-up-container">
-    <form action="/register?action=submit" method="post">
+    <form action="/register?action=submit" method="post" onsubmit="return ValidateFormRegister()" >
       <h1>Create Account</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -278,20 +253,23 @@
         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <span>or use your email for registration</span>
+      <span id="new-username-validation-message" style="color: red"></span>
       <input type="text" placeholder="Username" id="newUsername" name="newUsername" />
+      <span id="email-validation-message" style="color: red"></span>
       <input type="email" placeholder="Email" id="email" name="email" />
+      <span id="new-password-validation-message" style="color: red"></span>
       <input type="password" placeholder="Password" name="newPassword" id="id_password1" />
       <i class="far fa-eye" id="togglePassword1" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br>
+      <span id="confirm-password-validation-message" ></span>
       <input type="password" placeholder="Confirm Password" name="confirmPassword" id="id_password2" />
       <i class="far fa-eye" id="togglePassword2" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br><br>
       <div>
         <button type="reset" style="float: left; width: 140px; background-color: white; color: #FF4B2B">Reset</button>
-        <button type="submit" style="float: right; width: 140px; margin-left: 4px;">SignUp</button>
       </div>
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form action="/login?action=submit" method="post">
+    <form action="/account?action=submit" method="post" onsubmit="return ValidateFormLogin()" >
       <h1>Sign in</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -299,26 +277,14 @@
         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <span>or use your account</span>
-      <input type="text" placeholder="Username" id="username" name="username" />
+      <span id="username-validation-message" style="color: red"></span>
+      <input type="text" placeholder="Username" id="username" name="username"/>
+      <span id="password-validation-message" style="color: red"></span>
       <input type="password" placeholder="Password" name="password" autocomplete="current-password" required="" id="id_password" />
       <i class="far fa-eye" id="togglePassword" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br>
       <a href="#">Forgot your password?</a>
       <button type="submit">Sign In</button>
     </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1>Welcome Back!</h1>
-        <p>To keep connected with us please login with your personal info</p>
-        <button class="ghost" id="signIn">Sign In</button>
-      </div>
-      <div class="overlay-panel overlay-right">
-        <h1>Hello, Friend!</h1>
-        <p>Enter your personal details and start journey with us</p>
-        <button class="ghost" id="signUp">Sign Up</button>
-      </div>
-    </div>
   </div>
 </div>
 <script>
@@ -366,6 +332,34 @@
     // toggle the eye slash icon
     this.classList.toggle('fa-eye-slash');
   });
+
+  //Validate form login
+  function ValidateFormLogin() {
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("id_password").value;
+    if(username.length < 3 || password.length < 6) {
+      if(username.length < 3) document.getElementById("username-validation-message").innerHTML = "Username must be at least 3 characters";
+      if(password.length < 6) document.getElementById("password-validation-message").innerHTML = "Password must be at least 6 characters";
+      return false;
+    }
+    return true;
+  };
+
+  //Validate form register
+  function ValidateFormRegister() {
+    let username = document.getElementById("newUsername").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("id_password1").value;
+    let confirmPassword = document.getElementById("id_password2").value;
+    if(username.length < 3 || email.length < 6 || password.length < 6 || password !== confirmPassword) {
+      if(username.length < 3) document.getElementById("new-username-validation-message").innerHTML = "Username must be at least 3 characters";
+      if(password.length < 6) document.getElementById("email-validation-message").innerHTML = "Email must be at least 6 characters";
+      if(password.length < 6) document.getElementById("new-password-validation-message").innerHTML = "Password must be at least 6 characters";
+      if(password !== confirmPassword) document.getElementById("confirm-password-validation-message").innerHTML = "Confirm password not matching";
+      return false;
+    }
+    return true;
+  };
 </script>
 </body>
 </html>
