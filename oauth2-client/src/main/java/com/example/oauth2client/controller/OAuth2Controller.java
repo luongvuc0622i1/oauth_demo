@@ -15,13 +15,15 @@ import java.util.Map;
 @CrossOrigin("*")
 //@RequestMapping("/oauth")
 public class OAuth2Controller {
-
+    private String accessToken;
+    private String refreshToken;
     private static final String CLIENT_ID = "mobile";
     private static final String CLIENT_SECRET = "pin";
     private static final String REDIRECT_URI = "http://localhost:8082/oauth/callback";
-
-    private String accessToken;
-    private String refreshToken;
+    private final String REDIRECT_URL_ACCOUNT = "redirect:http://localhost:8081/oauth/authorize?client_id=mobile&response_type=code&redirect_uri=http://localhost:8082/oauth/callback&scope=WRITE";
+    private final String REDIRECT_URL_INFO = "redirect:http://localhost:8081/users/profile?access_token=";
+    private final String REDIRECT_URL_LOGOUT_1 = "redirect:http://localhost:8081/oauth/revoke_token?access_token=";
+    private final String REDIRECT_URL_LOGOUT_2 = "&refresh_token=";
 
     @Autowired
     private OAuth2Service oAuth2Service;
@@ -46,18 +48,18 @@ public class OAuth2Controller {
         return ResponseEntity.ok(bodyAccessToken);
     }
 
-    @GetMapping("/login")
-    public ModelAndView login() {
-        return new ModelAndView("redirect:http://localhost:8081/oauth/authorize?client_id=mobile&response_type=code&redirect_uri=http://localhost:8082/oauth/callback&scope=WRITE");
+    @GetMapping("/account")
+    public ModelAndView account() {
+        return new ModelAndView(REDIRECT_URL_ACCOUNT);
     }
 
     @GetMapping("/info")
     public ModelAndView info() {
-        return new ModelAndView("redirect:http://localhost:8081/users/profile?access_token="+accessToken);
+        return new ModelAndView(REDIRECT_URL_INFO + accessToken);
     }
 
-    @GetMapping("/logout1")
+    @GetMapping("/signout")
     public ModelAndView logout() {
-        return new ModelAndView("redirect:http://localhost:8081/oauth/revoke_token?access_token="+accessToken+"&refresh_token="+refreshToken);
+        return new ModelAndView(REDIRECT_URL_LOGOUT_1 + accessToken + REDIRECT_URL_LOGOUT_2 + refreshToken);
     }
 }
