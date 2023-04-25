@@ -13,4 +13,8 @@ public interface UserService {
     User save(User user);
 
     Boolean notExistEmail(String email);
+
+    void changePassword(User u, String password);
+
+    User findByEmail(String email);
 }

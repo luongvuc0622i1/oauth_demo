@@ -26,6 +26,10 @@ public class User implements Serializable {
         this.roles = user.getRoles();
     }
 
+    public User(String password){
+        this.password = password;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

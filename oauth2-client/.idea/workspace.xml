@@ -4,27 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dec087b-aa4d-400c-afd3-e8950ff6b4bc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/webapp/WEB-INF/forgot-password.jsp" afterDir="false" />
+    <list default="true" id="1dec087b-aa4d-400c-afd3-e8950ff6b4bc" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/oauth2client/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo-oauth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo-oauth2/demo-oauth2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/demo-oauth2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/oauth2/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/oauth2/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/webapp/WEB-INF/account.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/webapp/WEB-INF/account.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oauth2client/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oauth2client/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/oauth2client/controller/OAuth2Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/oauth2client/controller/OAuth2Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/oauth2client/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/oauth2client/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/oauth2client/controller/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/oauth2client/controller/OAuth2Controller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -32,65 +35,88 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2OaGkSONWC8iDl842u7a6DduVj9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/gialuong/Documents/Oauth/oauth2-client",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "d51789e426cfcc3a1892af91e973ead7"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
-    ]
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo-oauth2" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Oauth2ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="oauth2-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.oauth2client.Oauth2ClientApplication" />
       <extension name="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -101,6 +127,10 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
         </ENTRIES>
       </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.oauth2client.Oauth2ClientApplication" />
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +148,37 @@
       <workItem from="1681792784144" duration="16999000" />
       <workItem from="1681873907876" duration="679000" />
       <workItem from="1681874679727" duration="9888000" />
+      <workItem from="1681978822238" duration="191000" />
+      <workItem from="1681979163859" duration="5403000" />
+      <workItem from="1682042380331" duration="2295000" />
+      <workItem from="1682046023049" duration="4400000" />
+      <workItem from="1682300895734" duration="941000" />
+      <workItem from="1682327965914" duration="679000" />
+      <workItem from="1682328778390" duration="3676000" />
+      <workItem from="1682388420449" duration="6949000" />
     </task>
+    <task id="LOCAL-00001" summary="Changes">
+      <created>1682394561589</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682394561589</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changes">
+      <created>1682394738677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682394738677</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes">
+      <created>1682394768261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682394768261</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,5 +194,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
 </project>

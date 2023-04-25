@@ -282,7 +282,7 @@
       <span id="password-validation-message" style="color: red"></span>
       <input type="password" placeholder="Password" name="password" autocomplete="current-password" required="" id="id_password" />
       <i class="far fa-eye" id="togglePassword" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br>
-      <a href="#">Forgot your password?</a>
+      <a href="http://localhost:8082/verifyCode">Forgot your password?</a>
       <button type="submit">Sign In</button>
     </form>
   </div>

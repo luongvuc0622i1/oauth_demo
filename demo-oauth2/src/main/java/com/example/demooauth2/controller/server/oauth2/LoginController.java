@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +29,11 @@ public class LoginController {
     @GetMapping("/account")
     public String login() {
         return "account";
+    }
+
+    @PostMapping("/account")
+    public ModelAndView login(HttpServletRequest request){
+        return new ModelAndView("redirect:http://localhost:8084/home");
     }
 
     @PostMapping("/register")
@@ -63,5 +69,27 @@ public class LoginController {
     @GetMapping("/forgot")
     public ModelAndView forgot() {
         return new ModelAndView("forgot-password");
+    }
+
+    @GetMapping("/ChangePassword")
+    public ModelAndView changePassword(){
+        return new ModelAndView("ChangePassword");
+    }
+
+    @PostMapping("/ChangePassword")
+    public ModelAndView changePassword(HttpServletRequest request, HttpSession session){
+        String password = request.getParameter("password");
+        String cofimPassword = request.getParameter("re_password");
+        String email = request.getParameter("email");
+        User u = userService.findByEmail(email);
+        if((password.equals(cofimPassword)) && (u != null)){
+            userService.changePassword(u,password);
+            session.setAttribute("client_id", "mobile");
+            session.setAttribute("response_type", "code");
+            session.setAttribute("redirect_uri", "http://localhost:8082/oauth/callback");
+            session.setAttribute("scope", "WRITE");
+            return new ModelAndView("account");
+        }
+        return  new ModelAndView("error");
     }
 }

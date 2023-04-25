@@ -4,6 +4,7 @@ import com.example.demooauth2.model.User;
 import com.example.demooauth2.repository.UserRepository;
 import com.example.demooauth2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -38,5 +39,17 @@ public class UserServiceImpl implements UserService {
             }
         }
         return true;
+    }
+
+    @Override
+    public void changePassword(User u, String password) {
+        u.setPassword(new BCryptPasswordEncoder(10).encode(password));
+        userRepository.save(u);
+    }
+
+
+    @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email);
     }
 }
